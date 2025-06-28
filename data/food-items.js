@@ -1,4 +1,4 @@
-const proudctsI = [{
+ const productsI = [{
     image:"/img/image-waffle-tablet.jpg",
      name:"waffle",
      description:"affle with berries",
@@ -18,7 +18,7 @@ const proudctsI = [{
      price:500
 }]
 
- const proudctsII = [
+  const productsII = [
     {
    image:"/img/image-panna-cotta-tablet.jpg",
      name:"Panna Cotta",
@@ -36,7 +36,7 @@ const proudctsI = [{
      description:"Red Velvet Cake",
      price:450 
 }]
- const proudctsIII =[
+ const prodcutsIII =[
 {
     image:"/img/image-creme-brulee-tablet.jpg",
      name:" Creme Brulee",
