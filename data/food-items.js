@@ -1,4 +1,4 @@
- const productsI = [{
+ export const productsI = [{
     image:"/img/image-waffle-tablet.jpg",
      name:"waffle",
      description:"affle with berries",
@@ -18,7 +18,7 @@
      price:500
 }]
 
-  const productsII = [
+ export const productsII = [
     {
    image:"/img/image-panna-cotta-tablet.jpg",
      name:"Panna Cotta",
@@ -36,7 +36,7 @@
      description:"Red Velvet Cake",
      price:450 
 }]
- const prodcutsIII =[
+ export const prodcutsIII =[
 {
     image:"/img/image-creme-brulee-tablet.jpg",
      name:" Creme Brulee",
