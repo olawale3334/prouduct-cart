@@ -1,10 +1,25 @@
-export let cart = [{
+export let cart = JSON.parse(localStorage.getItem('cart'));
+
+   if(!cart){
+    cart = [{
     productDescription:"affle with berries",
     quanity: 1
 },{
    productDescription:"Pistachio Baklava",
     quanity: 2  
 }];
+ }
+
+
+
+
+
+
+  
+
+     function saveLocalstorage() {
+    localStorage.setItem('cart',JSON.stringify(cart))
+  }
 
 
   export function addToCart(productDescription) {
@@ -17,14 +32,18 @@ export let cart = [{
             });
 
             if(macthingItem){
-                macthingItem.quanity +=1
+                macthingItem.quanity += 1
             }else{
                 cart.push({
-                productDescription:productDescription,
-                quanity: 1
-        })
+                    productDescription:productDescription,
+                    quanity: 1
+                })
+
+                saveLocalstorage()
             }
+
             }
+
 
          export   function removeFromCart(productDescription){
                 const newCart =[];
@@ -36,5 +55,5 @@ export let cart = [{
                 })
                   cart = newCart
                   
-                  
+                  saveLocalstorage()
             }

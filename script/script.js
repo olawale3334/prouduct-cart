@@ -74,6 +74,7 @@ document.querySelector(".js-grid3").innerHTML =  productHTML2
      allCart.forEach((all)=>{
         all.innerHTML = `${cartQuantity}`
      })
+     
       }
 
       
@@ -86,6 +87,7 @@ document.querySelector(".js-grid3").innerHTML =  productHTML2
      addToCart(productDescription)
      updateCartQuantity()
      
+     
  })
 })
       
@@ -93,7 +95,7 @@ document.querySelector(".js-grid3").innerHTML =  productHTML2
 
 
   let products = [...productsI  , ...productsII, ...prodcutsIII]
-  console.log(products);
+  
   
 let cartSumaryHTML = '';
  
@@ -104,7 +106,7 @@ cart.forEach((cartItems)=>{
      products.forEach((product)=>{
        if(product.description === productDescription){
         macthingProduct = product;
-         console.log(macthingProduct);
+        
        }
        
      })
@@ -145,7 +147,7 @@ cart.forEach((cartItems)=>{
               container.remove();
             }
           }
-          
+
           document.querySelectorAll('.js-delete').forEach((del) => {
             del.addEventListener('click', () => handleDeleteClick(del));
           });
