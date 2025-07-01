@@ -1,21 +1,16 @@
-export let cart = JSON.parse(localStorage.getItem('cart'));
+import { renderCart } from "../script/script.js";
+export let cart = JSON.parse(localStorage.getItem('cart')) || []
 
-   if(!cart){
-    cart = [{
-    productDescription:"affle with berries",
-    quanity: 1
-},{
-   productDescription:"Pistachio Baklava",
-    quanity: 2  
-}];
- }
+//    if(!cart){
+//     cart = [{
+//     productDescription:"affle with berries",
+//     quanity: 1
+// },{
+//    productDescription:"Pistachio Baklava",
+//     quanity: 2  
+// }];
+//  }
 
-
-
-
-
-
-  
 
      function saveLocalstorage() {
     localStorage.setItem('cart',JSON.stringify(cart))
@@ -38,10 +33,10 @@ export let cart = JSON.parse(localStorage.getItem('cart'));
                     productDescription:productDescription,
                     quanity: 1
                 })
-
-                saveLocalstorage()
             }
-
+                saveLocalstorage();
+                renderCart();
+            
             }
 
 
@@ -53,7 +48,9 @@ export let cart = JSON.parse(localStorage.getItem('cart'));
                     }
                     
                 })
-                  cart = newCart
-                  
-                  saveLocalstorage()
+                  cart.length = 0;
+                    newCart.forEach(item => cart.push(item));
+
+                    saveLocalstorage();
+                    renderCart();
             }
